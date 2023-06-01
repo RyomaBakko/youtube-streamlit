@@ -6,25 +6,31 @@ import time
 
 
 #Now
-st.title('Stream 超入門')
+st.title('Ryomaの遊び場')
 
-st.write('プログレスバーの表示')
 'Start!'
 
 latest_iteration = st.empty()
 bar = st.progress(0)
 for i in range(100):
-    latest_iteration.text(f'Iteration{i+1}')
+    latest_iteration.text(f'Ryoma のやる気{i+1}')
     bar.progress(i+1)
-    time.sleep(0.1)
+    time.sleep(0.01)
+    
+if st.checkbox('Ryomaに会いたいですか？'):
+    img = Image.open('IMG_2135.JPG')
+    st.image(img, caption='Ryoma', use_column_width=True)
+    """
+    # 'やあ、元気かい？'
+    """
+    
 
 left_column, right_column = st.columns(2)
-button = left_column.button('右カラムに文字を表示')
+button = left_column.button('Ryomaの今の気持ちを表示')
 if button:
-    right_column.write('ここは右カラム')
+    right_column.write('早く退勤してえ')
 
-expander = st.expander('問い合わせ')
-expander.write('問い合わせ内容を書く')
+
 
 
 
@@ -34,25 +40,24 @@ expander.write('問い合わせ内容を書く')
 #option = st.selectbox('あなたが好きな数字は？', list(range(1, 11)))  
 #'あなたの好きな数字は', option, 'です'
 
-#if st.checkbox('Show Image'):
-    #img = Image.open('IMG_2135.JPG')
-    #st.image(img, caption='Ryoma', use_column_width=True)
+
+
+#expander = st.expander('問い合わせ')
+#expander.write('問い合わせ内容を書く')
 
 
 
 
+# """
 
+# # 章
+# ## 節
+# ### 項
 
-"""
+# ```python
+# ```
 
-# 章
-## 節
-### 項
-
-```python
-```
-
-"""
+# """
 
 
 # df = pd.DataFrame({
