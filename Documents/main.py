@@ -17,13 +17,8 @@ for i in range(100):
     bar.progress(i+1)
     time.sleep(0.01)
     
-if st.checkbox('Ryomaに会いたいですか？'):
-    img = Image.open('IMG_2135.JPG')
-    st.image(img, caption='Ryoma', use_column_width=True)
-    """
-    # 'やあ、元気かい？'
-    """
-    
+
+
 
 left_column, right_column = st.columns(2)
 button = left_column.button('Ryomaの今の気持ちを表示')
@@ -31,7 +26,12 @@ if button:
     right_column.write('早く退勤してえ')
 
 
+text = st.text_input('あなたが好きなことは？')  
 
+condition = st.slider('あなたの今の調子は？' ,0, 100, 50)
+
+'あなたの好きなことは', text, 'です'
+'あなたの調子は', condition, 'です'
 
 
 
@@ -65,6 +65,13 @@ if button:
     # '2列目': [10, 20, 30, 40]
 # }) 
 
+# if st.checkbox('Ryomaに会いたいですか？'):
+#     img = Image.open('IMG_2135.JPG')
+#     st.image(img, caption='Ryoma', use_column_width=True)
+#     """
+#     # 'やあ、元気かい？'
+#     """
+
 
 # st.table(df.style.highlight_max(axis=0))
 
@@ -84,9 +91,3 @@ if button:
 
 #condition = st.sidebar.slider('あなたの今の調子は？' ,0, 100, 50)
 
-# text = st.text_input('あなたが好きなことは？')  
-
-# condition = st.slider('あなたの今の調子は？' ,0, 100, 50)
-
-# 'あなたの好きなことは', text, 'です'
-# 'あなたの調子は', condition, 'です'
